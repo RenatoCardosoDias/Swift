@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet var buttons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
