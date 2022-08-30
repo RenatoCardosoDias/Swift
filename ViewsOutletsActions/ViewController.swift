@@ -21,5 +21,7 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func runSomething(_ sender: Any) {
+    }
 }
 
