@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var myView: UIView!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var botao: UIButton!
+    
     @IBOutlet weak var label: UILabel!
     
     @IBOutlet var buttons: [UIButton]!
@@ -20,8 +21,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func runSomething(_ sender: UIButton) {
+        print("runSomething")
+    }
+    
 
-    @IBAction func runSomething(_ sender: Any) {
+    @IBAction func botao1(_ sender: Any) {
+        print("Botão1")
+    }
+    
+    @IBAction func doSomething(_ sender: UIButton) {
+        print("doSomething")
+    }
+    
+    @IBAction func change(_ sender: Any) {
     }
 }
 
