@@ -12,6 +12,10 @@ class ApplicationData: NSObject, ObservableObject, UNUserNotificationCenterDeleg
     override init() {
         super.init()
         let center = UNUserNotificationCenter.current()
-        center.delegate = self 
+        center.delegate = self
     }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async ->
+        UNNotificationPresentationOptions{
+            return [.banner]
+        }
 } //end class
