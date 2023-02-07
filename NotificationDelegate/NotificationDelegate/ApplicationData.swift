@@ -9,5 +9,9 @@ import SwiftUI
 import UserNotifications
 
 class ApplicationData: NSObject, ObservableObject, UNUserNotificationCenterDelegate {
-
+    override init() {
+        super.init()
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self 
+    }
 } //end class
