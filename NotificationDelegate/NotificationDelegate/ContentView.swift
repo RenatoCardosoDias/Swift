@@ -41,7 +41,35 @@ struct ContentView: View {
             Spacer()
         }//end VStack
         .padding()
+        .task (priority: .background) {
+            do {
+                let center = UNUserNotificationCenter.current()
+                let autorized = try await center.requestAuthorization(options: [.alert, .sound])
+                await MainActor.run {
+                    isButtonDisabled = !autorized
+                }
+            } catch {
+                print("Error: \(error)")
+            } //end do catch
+        } //end .task
     } //end var body
+
+    func sendNotification() async {
+        let content = UNMutableNotificationContent()
+        content.title = "Reminder"
+        content.body = inputMessage
+
+        let idImage = "attach-\(UUID())"
+        if let urlImage = await getTumbnail(id: idImage) {
+            if let attachment = try? UNNotificationAttachment(identifier: idImage, url: urlImage, options: nil) {
+                content.attachments = [attachment]
+            } //end if let attachment
+        } //end if let urlImage
+    } //end func sendNotification()
+
+    func getThumbnail(id: String) async -> URL? {
+        
+    }
 } //end struct
 
 struct ContentView_Previews: PreviewProvider {
