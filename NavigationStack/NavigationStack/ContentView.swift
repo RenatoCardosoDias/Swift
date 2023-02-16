@@ -15,15 +15,11 @@ struct ContentView: View {
                                   .init(name: "Moblie", imageName: "iphone", color: .mint)]
 
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+        NavigationStack{
+
+        } //end NavigationStack
+    } //end var body
+} //end struct
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
