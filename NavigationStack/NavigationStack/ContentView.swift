@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    var plataform: [Plataform] = [.init(name: "Xbox", imageName: "xbox.logo", color: .green),
+                                  .init(name: "Playstation", imageName: "play.loto", color: .indigo),
+                                  .init(name: "PC", imageName: "pc", color: .pink),
+                                  .init(name: "Moblie", imageName: "iphone", color: .mint)]
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -23,4 +29,10 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct Plataform{
+    let name: String
+    let imageName: String
+    let color: Color
 }
