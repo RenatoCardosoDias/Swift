@@ -27,6 +27,13 @@ struct ContentView: View {
                 } //end Section
             } //end List
             .navigationTitle("Gaming")
+            .navigationDestination(for: Plataform.self) { plataform in
+                ZStack {
+                    plataform.color.ignoresSafeArea()
+                    Label(plataform.name, systemImage: plataform.imageName)
+                        .font(.largeTitle).bold()
+                } //end ZStack
+            } //end .navigationDestination
         } //end NavigationStack
     } //end var body
 } //end struct
