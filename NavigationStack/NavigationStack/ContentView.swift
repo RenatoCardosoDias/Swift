@@ -13,6 +13,11 @@ struct ContentView: View {
                                   .init(name: "Playstation", imageName: "play.loto", color: .indigo),
                                   .init(name: "PC", imageName: "pc", color: .pink),
                                   .init(name: "Moblie", imageName: "iphone", color: .mint)]
+    var games: [Game] = [.init(name: "Minicraft", rating: "99"),
+                         .init(name: "God of War", rating: "98"),
+                         .init(name: "Fortnine", rating: "92"),
+                         .init(name: "Madden 2023", rating: "88")
+    ]
 
     var body: some View {
         NavigationStack{
@@ -25,6 +30,11 @@ struct ContentView: View {
                         }
                     } //end ForEach
                 } //end Section
+                Section("Games") {
+                    ForEach(games, id: \.name) { game in
+                        Text(game.name)
+                    }
+                }
             } //end List
             .navigationTitle("Gaming")
             .navigationDestination(for: Plataform.self) { plataform in
@@ -48,4 +58,9 @@ struct Plataform: Hashable{
     let name: String
     let imageName: String
     let color: Color
+}
+
+struct Game: Hashable {
+    let name: String
+    let rating: String
 }
