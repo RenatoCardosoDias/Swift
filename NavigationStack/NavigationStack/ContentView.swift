@@ -19,8 +19,13 @@ struct ContentView: View {
                          .init(name: "Madden 2023", rating: "88")
     ]
 
+//    @State private var path: [Game] = []
+
+    @State private var path = NavigationPath()
+
     var body: some View {
-        NavigationStack{
+//        NavigationStack (path: $path )
+        NavigationStack {
             List{
                 Section("Plataform") {
                     ForEach(plataforms, id: \.name) { plataform in
@@ -32,17 +37,48 @@ struct ContentView: View {
                 } //end Section
                 Section("Games") {
                     ForEach(games, id: \.name) { game in
-                        Text(game.name)
-                    }
-                }
+                        NavigationLink(value: game) {
+                            Text(game.name)
+                        } //end NavigationLlink
+                    } //end ForEach
+//                    Button("Add Games") {
+//                        path.append(games.first!)
+//                    }
+                } //end Section Game
             } //end List
             .navigationTitle("Gaming")
             .navigationDestination(for: Plataform.self) { plataform in
                 ZStack {
                     plataform.color.ignoresSafeArea()
-                    Label(plataform.name, systemImage: plataform.imageName)
-                        .font(.largeTitle).bold()
+                    VStack{
+                        Label(plataform.name, systemImage: plataform.imageName)
+                            .font(.largeTitle).bold()
+                        List {
+                            ForEach(games, id: \.name) { game in
+                                NavigationLink(value: game) {
+                                    Text(game.name)
+                                } //end NavigationLlink
+                            } //end ForEach
+                        } //end List
+                    } //end VStack
                 } //end ZStack
+            } //end .navigationDestination
+            .navigationDestination(for: Game.self) { game in
+                VStack(spacing: 20){
+                    Text("\(game.name) - \(game.rating)")
+                        .font(.largeTitle.bold())
+
+                    Button("Recommend game") {
+                        path.append(games.randomElement()!)
+                    }
+                    Button("Go to another plataform") {
+                        path.append(plataforms.randomElement()!)
+                    }
+                    Button("Go Home"){
+                        path.removeLast(0)
+                        path.removeAll(path.count) //remove todos os cliques que deu e vai direto para o root
+                    }
+                } //end Vstack
             } //end .navigationDestination
         } //end NavigationStack
     } //end var body
