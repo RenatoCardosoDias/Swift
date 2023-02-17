@@ -24,3 +24,19 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+struct ViewMonth: Identifiable {
+    let id = UUID()
+    let date: Date
+    let viewCount: Int
+
+}
+
+//criando dados ficticios
+//esta extensão nos permite criar uma Data para a ViewMonth, passando os dodos como ano, mes e dia 
+extension Data {
+    static func from(year: Int, month: Int, day: Int) -> Date {
+        let components = DateComponents(year: year, month: month, day: day)
+        return Calendar.current.date(from: components)!
+    }
+} //extension
