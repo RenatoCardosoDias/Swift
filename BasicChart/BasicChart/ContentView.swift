@@ -33,9 +33,12 @@ struct ContentView: View {
                 ForEach(viewMonths) { viewMonth in //criando um for para cada mes do array da viewMonths e para cada mes apresentado criar um grafico em linha para o mes e para a quantidade de visualizações
                     BarMark(x: .value("Mounth", viewMonth.date, unit: .month),
                             y: .value("Views", viewMonth.viewCount))
-                }
+                } //end ForEach
             } //end Chart
+            .frame(height: 180)
+            Spacer()
         } //end VStack
+
     } //end var body
 }
 
