@@ -30,17 +30,31 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Chart{
+                RuleMark(y: .value("Goal", 80000))
+                    .foregroundStyle(Color.mint)
+                    .lineStyle(StrokeStyle(lineWidth: 1, dash: [5]))
+                    .annotation(alignment: .leading) {
+                        Text("Goal")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+
+
                 ForEach(viewMonths) { viewMonth in //criando um for para cada mes do array da viewMonths e para cada mes apresentado criar um grafico em linha para o mes e para a quantidade de visualizações
                     BarMark(x: .value("Mounth", viewMonth.date, unit: .month),
                             y: .value("Views", viewMonth.viewCount))
                 } //end ForEach
+                .foregroundStyle(Color.pink.gradient)
             } //end Chart
             .frame(height: 180)
-            Spacer()
+//            .chartPlotStyle{ plotContent in
+//                plotContent
+//                    .background(.mint.gradient.opacity(0.3))
+//            } //end .chartPlotStyle
         } //end VStack
-
+        .padding()
     } //end var body
-}
+} //end struct ContentView
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
