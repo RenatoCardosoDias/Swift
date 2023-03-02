@@ -1,16 +1,9 @@
 //
 //  ContentView.swift
-//  SinglePlayerTitcTacToe
+//  HowUseAlert
 //
-//  Created by Renato on 20/02/23.
+//  Created by Renato on 02/03/23.
 //
-// If AI can, win, theh win
-//If AI can't win, then block
-//If AI can't block, then thake middel square'
-//If AI can't take middle square, take random available square
-
-
-
 
 import SwiftUI
 
