@@ -11,7 +11,33 @@ import Foundation
 class DataModel {
     private var dataTask: URLSessionDataTask?
 
-    
+    //adicions o metor que atualemente construiu ou criou essa url e enviou as requisições e adicionar um completion block quando qualquer  requisição for sucesso ou falha, vamos fornecer a lista(array) de musicas, e esse metodo não irá retornar valor
+    func loadSongs(searchTerm: String, complition: @escaping([Song]) -> Void) {
+        //primeiro vamos cancelar a tarefa que estiver sendo executada, quando este metodo é chamado
+        dataTask?.cancel()
+        //vamos criar uma tentativa de criar a url base neste searchTerm
+        guard let url = buildUrl(forTerm: searchTerm) else {
+            //se nao for capaz de construir isso chamamos o complition block com uma lista(array) em branco e a retornamos
+            complition([])
+            return
+        } //end guard let url
+
+        //se for capaz de construir a lista nos a criamos um novo dataTask e recupramos os dados
+        dataTask = URLSession.shared.dataTask(with: url) { data, _, _ in
+            //primeiro vamos checar se nos somos capazes de receber estes dados
+            guard let data = data else {
+                //se nao for capaz de receber os dados da api, chamamos o complition com uma lista(array) em branco e retornmaos
+                complition([])
+                return
+            } //end guard let data
+            //se for capaz vamos tentar fazer a decodifcação da resposta no formato json e vamos chamar o completion handler com a lista de musicas
+            if let songResponse = try?  JSONDecoder().decode( SongResponse.self, from: data) {
+                //se formos capaz de decodificar vamos chamar o complition
+                complition(songResponse.songs)
+            } //end if let songResponse
+        } //end dataTask
+        dataTask?.resume()
+    } //end func loadSons
 
     private func buildUrl (forTerm searchTerm: String) -> URL? {
         //garantir que o campo nao esteja vazaio
@@ -30,7 +56,7 @@ class DataModel {
         return components?.url
     } //private func buildUrl
 
-//adicions o metor que atualemente construiu or criou essa url e enviou as reque
+
 
 
 } //end class DataModel

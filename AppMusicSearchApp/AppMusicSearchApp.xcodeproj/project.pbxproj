@@ -14,6 +14,7 @@
 		88350EDD29B2A58300089A57 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88350EDC29B2A58300089A57 /* SearchBarView.swift */; };
 		88350EDF29B2A5D100089A57 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88350EDE29B2A5D100089A57 /* EmptyStateView.swift */; };
 		88350EE129B2A9C100089A57 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88350EE029B2A9C000089A57 /* DataModel.swift */; };
+		88E77A7E29B6819F0070C8C1 /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E77A7D29B6819F0070C8C1 /* SongListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		88350EDC29B2A58300089A57 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		88350EDE29B2A5D100089A57 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		88350EE029B2A9C000089A57 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		88E77A7D29B6819F0070C8C1 /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				88350EE029B2A9C000089A57 /* DataModel.swift */,
+				88E77A7D29B6819F0070C8C1 /* SongListViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				88350EE129B2A9C100089A57 /* DataModel.swift in Sources */,
 				88350ED129B285DB00089A57 /* ContentView.swift in Sources */,
 				88350EDD29B2A58300089A57 /* SearchBarView.swift in Sources */,
+				88E77A7E29B6819F0070C8C1 /* SongListViewModel.swift in Sources */,
 				88350EDF29B2A5D100089A57 /* EmptyStateView.swift in Sources */,
 				88350ECF29B285DB00089A57 /* AppMusicSearchAppApp.swift in Sources */,
 			);
