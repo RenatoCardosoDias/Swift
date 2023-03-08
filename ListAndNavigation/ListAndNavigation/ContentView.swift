@@ -70,7 +70,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             List(emojiList) { emojiItem in
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: DetailsView(emojiItem: emojiItem)) {
                     HStack {
                         EmojiCircleView(emojiItem: emojiItem)
                         Text(emojiItem.name)
