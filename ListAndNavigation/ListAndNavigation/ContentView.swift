@@ -84,6 +84,30 @@ struct ContentView: View {
     } //end var body
 } //end struct Content View
 
+struct DetailsView: View {
+    let emojiItem: EmojiItem
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack{
+                EmojiCircleView(emojiItem: emojiItem)
+                    .padding(.trailing, 5)
+
+                Text(emojiItem.name)
+                    .font(.largeTitle)
+                    .bold()
+                Spacer()
+            } //end HStack
+            Text(emojiItem.description)
+                .padding(.top)
+            Spacer()
+        } //end VStack
+        .padding()
+        .navigationTitle(Text(emojiItem.name))
+        .navigationBarTitleDisplayMode(.inline)
+    } //end var boyd
+} //end struct DetailView
+
 struct EmojiCircleView: View {
     let emojiItem: EmojiItem
 
