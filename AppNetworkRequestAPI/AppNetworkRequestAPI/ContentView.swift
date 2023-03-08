@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    //vamos definir o Estado com o tipo opcional, pois pode conter ou nao dados
+    @State private var quoteData: QuoteData?
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,7 +24,7 @@ struct ContentView: View {
 
 //definindo a estrutura que representa a resposta obtida ao fazer uma solicitação da resposta obtida à API de citação
 
-struct QuoteData: Decodable { //se quisermos analisar uma resposta que recebemos ao fazer uma solicitação, precisamos garantir que o swift entenda que nossos dados podem ser decodificados, 
+struct QuoteData: Decodable { //se quisermos analisar uma resposta que recebemos ao fazer uma solicitação, precisamos garantir que o swift entenda que nossos dados podem ser decodificados,
     var slip_id: String
     var advice: String
 
