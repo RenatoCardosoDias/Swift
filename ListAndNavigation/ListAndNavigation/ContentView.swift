@@ -10,7 +10,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     private let emojiList: [EmojiItem] = [
         EmojiItem(
             emoji: "👾",
@@ -63,24 +63,16 @@ struct ContentView: View {
             description: "A rectangular map of the world. Generally depicted as a paper map creased at "
             + "its folds, Earth’s surface shown in green on blue ocean."),
     ]
-    
-    
+
+
     //2ª implementar o navigationLink para cada linha da lista, quando tocar sobre isso vai nos mostrar um detalhe
-    
+
     var body: some View {
         NavigationView{
             List(emojiList) { emojiItem in
                 NavigationLink(destination: EmptyView()) {
                     HStack {
-                        ZStack {
-                            Text(emojiItem.emoji)
-                                .shadow(radius: 3)
-                                .font(.largeTitle)
-                                .frame(width: 65, height: 65)
-                                .overlay(
-                                    Circle().stroke(Color.purple, lineWidth: 3)
-                                ) //end .overlay
-                        } //end ZStack
+                        EmojiCircleView(emojiItem: emojiItem)
                         Text(emojiItem.name)
                             .font(.headline)
                     } //end HStack
@@ -91,6 +83,22 @@ struct ContentView: View {
         } //end NavigationView
     } //end var body
 } //end struct Content View
+
+struct EmojiCircleView: View {
+    let emojiItem: EmojiItem
+
+    var body: some View {
+        ZStack {
+            Text(emojiItem.emoji)
+                .shadow(radius: 3)
+                .font(.largeTitle)
+                .frame(width: 65, height: 65)
+                .overlay(
+                    Circle().stroke(Color.purple, lineWidth: 3)
+                ) //end .overlay
+        } //end ZStack
+    } //end var body
+} //end struct EmojiCicleView
 
 struct EmojiItem: Identifiable {
     let id = UUID()
