@@ -12,13 +12,17 @@ struct ContentView: View {
     @State private var quoteData: QuoteData?
 
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack{
+            
         }
-        .padding()
+    } //end var body
+
+    //Garantir que a resposta pode ser visualizada na view principal
+    private func loadData() {
+        //garantir que a url é valida
+        //https://api.adviceslip.com/advice
+
+        guard let url = URL(string: "https://api.adviceslip.com/advice") else { return }
     }
 }
 
