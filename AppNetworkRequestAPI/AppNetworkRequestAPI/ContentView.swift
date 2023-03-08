@@ -21,7 +21,7 @@ struct ContentView: View {
 
 //definindo a estrutura que representa a resposta obtida ao fazer uma solicitação da resposta obtida à API de citação
 
-struct QuoteData {
+struct QuoteData: Decodable { //se quisermos analisar uma resposta que recebemos ao fazer uma solicitação, precisamos garantir que o swift entenda que nossos dados podem ser decodificados, 
     var slip_id: String
     var advice: String
 
