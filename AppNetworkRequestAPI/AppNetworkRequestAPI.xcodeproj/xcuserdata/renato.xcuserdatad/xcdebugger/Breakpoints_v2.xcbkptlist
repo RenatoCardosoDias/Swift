@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "71EFED92-3C23-49ED-BAFD-09FE281E49F7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9051437-A584-4424-9258-7FD6F684E6D4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppNetworkRequestAPI/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9051437-A584-4424-9258-7FD6F684E6D4 - 97b52238a899c4c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppNetworkRequestAPI.ContentView.loadData() -&gt; ()"
+                  moduleName = "AppNetworkRequestAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renato/Documents/XCODE/Swift/AppNetworkRequestAPI/AppNetworkRequestAPI/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "D9051437-A584-4424-9258-7FD6F684E6D4 - 97b52238a899c4c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppNetworkRequestAPI.ContentView.loadData() -&gt; ()"
+                  moduleName = "AppNetworkRequestAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renato/Documents/XCODE/Swift/AppNetworkRequestAPI/AppNetworkRequestAPI/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "640">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D80E836E-D78D-41D3-90C6-BC82F02E76FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppNetworkRequestAPI/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D80E836E-D78D-41D3-90C6-BC82F02E76FC - 97b52238a899c484"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppNetworkRequestAPI.ContentView.loadData() -&gt; ()"
+                  moduleName = "AppNetworkRequestAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renato/Documents/XCODE/Swift/AppNetworkRequestAPI/AppNetworkRequestAPI/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "D80E836E-D78D-41D3-90C6-BC82F02E76FC - 993082a6aca98973"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AppNetworkRequestAPI.ContentView.loadData() -&gt; ()"
+                  moduleName = "AppNetworkRequestAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/renato/Documents/XCODE/Swift/AppNetworkRequestAPI/AppNetworkRequestAPI/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A1C6E06-8153-44E4-861D-49B614377493"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppNetworkRequestAPI/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
